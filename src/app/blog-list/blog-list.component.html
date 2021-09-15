@@ -1,0 +1,27 @@
+<app-hrader></app-hrader>
+    <div class="container mt-5">
+        <div class="row">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th scope="col">title</th>
+                <th scope="col">author</th>
+                <th scope="col">View Blog</th>
+                <th scope="col">Update Blog</th>
+                <th scope="col">Delete Blog</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let blog of listblog">
+                  <th>{{blog.title}}</th>
+                  <th>{{blog.author}}</th>
+                  <th><button (click)="viewBlog(blog._id)" class="btn btn-primary">View</button></th>
+                  <th><button (click)="updateBlog(blog._id)" class="btn btn-info">Update</button></th>
+                  <th><button (click)="deleteBlog(blog._id)" class="btn btn-danger">Delete</button></th>
+              </tr>        
+            </tbody>
+          </table>
+          <th><button (click)="createBlog()" class="btn btn-success">Add Blog</button></th>
+        </div>
+      </div>
+ <app-footer></app-footer>
